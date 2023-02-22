@@ -12,6 +12,9 @@ const App = () => {
 
     React.useEffect(() => {
         return onAuthUIStateChange((nextAuthState, authData) => {
+            console.log("nextAuthState ", nextAuthState);
+            console.log("nextAuthState ", authData);
+      
             setAuthState(nextAuthState);
             setUser(authData)
         });
